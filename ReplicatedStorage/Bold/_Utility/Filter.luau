@@ -13,7 +13,13 @@ local function cacheKey(text: string, userId: number): string
 end
 
 local function evict()
-	if #_cache > CACHE_LIMIT then
+	local count = 1
+	
+	for k in pairs(_cache) do
+		count += 1
+	end
+	
+	if count > CACHE_LIMIT then
 		table.clear(_cache)
 	end
 end
