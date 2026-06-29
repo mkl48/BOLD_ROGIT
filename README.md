@@ -1,1 +1,3 @@
-# BOLD_ROGIT
+# My Roblox Project
+
+Managed with RoGit.
